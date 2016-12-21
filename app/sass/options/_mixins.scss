@@ -1,0 +1,99 @@
+
+/// UTILITY
+
+@mixin center() {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+}
+
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin no-outline() {
+  outline: none;
+  &:active {
+    outline: none;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+/// GRADIENT
+
+///   .foo {
+///     @include background-gradient(red, black, 'vertical');
+///   }
+
+@mixin background-gradient($start-color,
+$end-color,
+$orientation) {
+  background: $start-color;
+  @if $orientation=='vertical' {
+    background: -webkit-linear-gradient(top, $start-color, $end-color);
+    background: linear-gradient(to bottom, $start-color, $end-color);
+  }
+  @else if $orientation=='horizontal' {
+    background: -webkit-linear-gradient(left, $start-color, $end-color);
+    background: linear-gradient(to right, $start-color, $end-color);
+  }
+  @else {
+    background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
+    background: radial-gradient(ellipse at center, $start-color, $end-color);
+  }
+}
+
+/// ANIMATION
+
+///   @include keyframes(slide-down)
+///  {
+///    0% { opacity: 1; }
+///    90% { opacity: 0; }
+///  }
+///
+///  .element
+///  {
+///    width: 100px;
+///    height: 100px;
+///    background: black;
+///    @include animation('slide-down 5s 3');
+///  }
+
+@mixin animation($str)
+{
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+@mixin keyframes($animation-name)
+{
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}

@@ -1,0 +1,261 @@
+/*
+ *  SOCIAL_COLORS
+ */
+@font-face {
+  font-family: 'CaviarDreams';
+  src: url(../fonts/CaviarDreams.ttf);
+  font-weight: 400;
+  font-style: normal; }
+
+strong {
+  font-weight: bold; }
+
+body {
+  background: url(../img/montain-fogop.jpg) no-repeat center center fixed;
+  background-size: cover; }
+
+/*** Loader start ***/
+.load {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 80;
+  background: url(../img/montain-fog_loader.jpg) no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+  /*** Name animation ***/ }
+  .load svg {
+    fill-opacity: 0;
+    -webkit-transition: fill-opacity 0.5s;
+    transition: fill-opacity 0.5s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 500px; }
+    @media (max-width: 768px) {
+      .load svg {
+        width: 400px;
+        height: 400px; } }
+    @media (max-width: 320px) {
+      .load svg {
+        width: 300px;
+        height: 300px; } }
+    .load svg.finished {
+      fill-opacity: 1; }
+  .load .intro-name h2 {
+    font-family: 'CaviarDreams', sans-serif;
+    font-size: 40px;
+    font-weight: 200;
+    width: 100%;
+    overflow: hidden;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    letter-spacing: 14px;
+    text-align: center; }
+    @media (max-width: 320px) {
+      .load .intro-name h2 {
+        font-size: 18px;
+        width: 90%; } }
+  .load .intro-name h2,
+  .load .intro-name h2 > span {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 15px; }
+  .load .intro-name h2 > span > span {
+    display: inline-block;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    color: transparent;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-animation: animation-name 4.3s linear;
+    animation: animation-name 4.3s linear; }
+
+@-webkit-keyframes animation-name {
+  0% {
+    text-shadow: 0 0 50px #fff;
+    letter-spacing: 80px;
+    opacity: 0;
+    -webkit-transform: rotateY(-90deg); }
+  50% {
+    text-shadow: 0 0 1px #fff;
+    letter-spacing: 14px;
+    opacity: 0.8;
+    -webkit-transform: rotateY(0deg); }
+  85% {
+    text-shadow: 0 0 1px #fff;
+    opacity: 0.8;
+    -webkit-transform: rotateY(0deg) translateZ(100px); }
+  100% {
+    text-shadow: 0 0 10px #fff;
+    opacity: 0;
+    -webkit-transform: translateZ(140px);
+    pointer-events: none; } }
+
+@keyframes animation-name {
+  0% {
+    text-shadow: 0 0 50px #fff;
+    letter-spacing: 80px;
+    opacity: 0.2;
+    -webkit-transform: rotateY(-90deg);
+            transform: rotateY(-90deg); }
+  50% {
+    text-shadow: 0 0 1px #fff;
+    letter-spacing: 14px;
+    opacity: 0.8;
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg); }
+  85% {
+    text-shadow: 0 0 1px #fff;
+    opacity: 0.8;
+    -webkit-transform: rotateY(0deg) translateZ(100px);
+            transform: rotateY(0deg) translateZ(100px); }
+  100% {
+    text-shadow: 0 0 10px #fff;
+    opacity: 0;
+    -webkit-transform: translateZ(140px);
+            transform: translateZ(140px);
+    pointer-events: none; } }
+
+@-webkit-keyframes animation-fade {
+  0% {
+    opacity: 0;
+    text-shadow: 0 0 50px #fff; }
+  100% {
+    opacity: 0.8;
+    text-shadow: 0 0 1px #fff; } }
+
+@keyframes animation-fade {
+  0% {
+    opacity: 0;
+    text-shadow: 0 0 50px #fff; }
+  100% {
+    opacity: 0.8;
+    text-shadow: 0 0 1px #fff; } }
+
+/*** Loader and name animation end ***/
+/*** Content ***/
+.wrapper {
+  height: 100%;
+  width: 100%; }
+
+.logo {
+  text-align: center; }
+  .logo img {
+    width: 300px;
+    height: 240px; }
+    @media (max-width: 768px) {
+      .logo img {
+        width: 200px;
+        height: 140px; } }
+    @media (max-width: 768px) {
+      .logo img {
+        width: 250px;
+        height: 200px; } }
+
+h1 {
+  text-align: center;
+  margin: 40px;
+  color: white;
+  font-size: 40px;
+  font-family: 'CaviarDreams';
+  font-weight: bold; }
+  @media (max-width: 1440px) {
+    h1 {
+      font-size: 50px; } }
+  @media (max-width: 1200px) {
+    h1 {
+      font-size: 40px; } }
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 32px; } }
+  @media (max-width: 320px) {
+    h1 {
+      font-size: 25px;
+      display: inline-block; } }
+
+.about {
+  margin: 40px;
+  text-align: center;
+  color: #fff;
+  font-size: 22px;
+  font-family: 'CaviarDreams'; }
+  .about a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid #a10609; }
+  @media (max-width: 1200px) {
+    .about {
+      font-size: 20px;
+      margin: 20px; } }
+  @media (max-width: 768px) {
+    .about {
+      font-size: 18px;
+      margin: 20px; } }
+  @media (max-width: 320px) {
+    .about {
+      font-size: 16px;
+      margin: 40px 20px 40px 20px; } }
+
+/*** Mail ***/
+.mail {
+  margin: 40px;
+  text-align: center;
+  color: #fff;
+  font-size: 22px;
+  font-family: 'CaviarDreams';
+  font-weight: bold; }
+  .mail a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid #a10609; }
+  @media (max-width: 1200px) {
+    .mail {
+      font-size: 20px;
+      margin: 20px; } }
+  @media (max-width: 768px) {
+    .mail {
+      font-size: 18px;
+      margin: 20px; } }
+  @media (max-width: 320px) {
+    .mail {
+      font-size: 16px;
+      margin: 40px 20px 40px 20px; } }
+
+/*** Social Media ***/
+nav {
+  text-align: center;
+  margin-top: 40px; }
+  nav ul {
+    list-style: none;
+    padding: 0; }
+    nav ul li {
+      display: inline-block;
+      margin: 0 25px; }
+      nav ul li a i {
+        color: #FFFFFF; }
+        nav ul li a i:hover {
+          color: #a10609;
+          -webkit-transition: 0.3s;
+          transition: 0.3s; }
