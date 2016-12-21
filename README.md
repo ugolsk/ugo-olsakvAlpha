@@ -1,3 +1,3 @@
-#FrontEnd
+#Personal website
 
-Framework for front-end in progress
+Alpha version of my personal website
