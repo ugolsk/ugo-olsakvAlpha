@@ -355,18 +355,17 @@ h1{
 
 nav {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 30px;
 
   ul {
     list-style: none;
-    padding: 0;
 
     li {
       display: inline-block;
-      margin: 0 25px;
+      margin: 0 20px;
 
       a i {
-        color: #FFFFFF;
+        color: #fff;
 
         &:hover {
           color: $my-Red;
