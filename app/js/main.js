@@ -4,7 +4,7 @@ $(window).load(function() {
 });
 
 var loader = new Vivus('loader', {
-  type: 'delayed',
+  type: 'async',
   duration: 1,
   start: 'autostart',
   dashGap: 20,

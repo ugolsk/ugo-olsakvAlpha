@@ -11,7 +11,7 @@ strong {
   font-weight: bold; }
 
 body {
-  background: url(../img/montain-fogop.jpg) no-repeat center center fixed;
+  background: url(../img/montain-fogtoast.jpg) no-repeat center center fixed;
   background-size: cover; }
 
 /*** Loader start ***/
@@ -57,10 +57,14 @@ body {
     left: 0;
     letter-spacing: 14px;
     text-align: center; }
+    @media (max-width: 768px) {
+      .load .intro-name h2 {
+        font-size: 18px;
+        width: 95%; } }
     @media (max-width: 320px) {
       .load .intro-name h2 {
         font-size: 18px;
-        width: 90%; } }
+        width: 80%; } }
   .load .intro-name h2,
   .load .intro-name h2 > span {
     height: 100%;
@@ -246,16 +250,17 @@ h1 {
 /*** Social Media ***/
 nav {
   text-align: center;
-  margin-top: 40px; }
+  margin-top: 100px; }
   nav ul {
-    list-style: none;
-    padding: 0; }
+    list-style: none; }
     nav ul li {
       display: inline-block;
       margin: 0 25px; }
       nav ul li a i {
-        color: #FFFFFF; }
+        color: #fff;
+        -webkit-transition: 0.5s;
+        transition: 0.5s; }
         nav ul li a i:hover {
           color: #a10609;
-          -webkit-transition: 0.3s;
-          transition: 0.3s; }
+          -webkit-transform: rotate(360deg);
+                  transform: rotate(360deg); }
